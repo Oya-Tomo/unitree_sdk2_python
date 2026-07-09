@@ -30,6 +30,16 @@ class LocoClient(Client):
         self._RegistApi(ROBOT_API_ID_LOCO_SET_VELOCITY, 0)
         self._RegistApi(ROBOT_API_ID_LOCO_SET_ARM_TASK, 0)
 
+    # 7001
+    def GetFsmId(self):
+        p = {}
+        parameter = json.dumps(p)
+        code, data = self._Call(ROBOT_API_ID_LOCO_GET_FSM_ID, parameter)
+        if code != 0:
+            return code, None
+        js = json.loads(data)
+        return code, js.get("data")
+
     # 7101
     def SetFsmId(self, fsm_id: int):
         p = {}
@@ -76,7 +86,7 @@ class LocoClient(Client):
         self.SetFsmId(1)
     
     def Start(self):
-        self.SetFsmId(200)
+        self.SetFsmId(500)
 
     def Squat2StandUp(self):
         self.SetFsmId(706)
