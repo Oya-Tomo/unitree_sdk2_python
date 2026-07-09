@@ -4,7 +4,7 @@ unitree_sdk2 python 接口
 # 安装
 ## 依赖
 - python>=3.8
-- cyclonedds==0.10.2
+- cyclonedds 来自 `Oya-Tomo/cyclonedds-python` 的 `0.10.2-py313` 标签
 - numpy
 - opencv-python
 

@@ -14,7 +14,7 @@ setup(name='unitree_sdk2py',
       },
       python_requires='>=3.8',
       install_requires=[
-            "cyclonedds==0.10.2",
+            "cyclonedds @ git+https://github.com/Oya-Tomo/cyclonedds-python.git@0.10.2-py313",
             "numpy",
             "opencv-python",
       ],

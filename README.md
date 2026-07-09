@@ -4,7 +4,7 @@ Python interface for unitree sdk2
 # Installation
 ## Dependencies
 - Python >= 3.8
-- cyclonedds == 0.10.2
+- cyclonedds from `Oya-Tomo/cyclonedds-python` tag `0.10.2-py313`
 - numpy
 - opencv-python
 
